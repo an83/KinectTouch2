@@ -1,0 +1,9 @@
+﻿<Application x:Class="CCT.NUI.WPFSamples.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="KinectTouchWindow.xaml">
+    <!-- MainWindow KinectTouchWindow -->
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

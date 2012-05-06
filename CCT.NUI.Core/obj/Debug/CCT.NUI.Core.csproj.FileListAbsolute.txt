@@ -1,0 +1,14 @@
+C:\Users\admin\Downloads\candescentnui-14079\CCT.NUI.Core\bin\Debug\CCT.NUI.Core.dll
+C:\Users\admin\Downloads\candescentnui-14079\CCT.NUI.Core\bin\Debug\CCT.NUI.Core.pdb
+C:\Users\admin\Downloads\candescentnui-14079\CCT.NUI.Core\bin\Debug\OpenNI.net.dll
+C:\Users\admin\Downloads\candescentnui-14079\CCT.NUI.Core\bin\Debug\XnVNITE.net.dll
+C:\Users\admin\Downloads\candescentnui-14079\CCT.NUI.Core\obj\Debug\CCT.NUI.Core.dll
+C:\Users\admin\Downloads\candescentnui-14079\CCT.NUI.Core\obj\Debug\CCT.NUI.Core.pdb
+C:\Users\admin\Downloads\candescentnui-14079\CCT.NUI.Core\obj\Debug\CCT.NUI.Core.csprojResolveAssemblyReference.cache
+C:\Kinect\candescentnui-14079\CCT.NUI.Core\bin\Debug\CCT.NUI.Core.dll
+C:\Kinect\candescentnui-14079\CCT.NUI.Core\bin\Debug\CCT.NUI.Core.pdb
+C:\Kinect\candescentnui-14079\CCT.NUI.Core\bin\Debug\OpenNI.net.dll
+C:\Kinect\candescentnui-14079\CCT.NUI.Core\bin\Debug\XnVNITE.net.dll
+C:\Kinect\candescentnui-14079\CCT.NUI.Core\obj\Debug\CCT.NUI.Core.csprojResolveAssemblyReference.cache
+C:\Kinect\candescentnui-14079\CCT.NUI.Core\obj\Debug\CCT.NUI.Core.dll
+C:\Kinect\candescentnui-14079\CCT.NUI.Core\obj\Debug\CCT.NUI.Core.pdb

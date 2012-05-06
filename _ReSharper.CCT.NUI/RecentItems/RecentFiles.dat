@@ -1,0 +1,48 @@
+﻿<RecentFiles>
+  <RecentFiles>
+    <File id="AA2D3699-3FC9-43D6-AA24-CD930E487BC7/d:Shape/f:Shape.cs" caret="363" fromTop="16" />
+    <File id="AA2D3699-3FC9-43D6-AA24-CD930E487BC7/d:Shape/f:Contour.cs" caret="293" fromTop="15" />
+    <File id="E8310B15-6B84-40A5-856D-B0AE0EEE3771/f:HandDataSourceSettings.cs" caret="516" fromTop="17" />
+    <File id="E8310B15-6B84-40A5-856D-B0AE0EEE3771/f:ShapeHandDataFactory.cs" caret="5566" fromTop="42" />
+    <File id="AA2D3699-3FC9-43D6-AA24-CD930E487BC7/d:Shape/f:ContourFactory.cs" caret="821" fromTop="26" />
+    <File id="AA2D3699-3FC9-43D6-AA24-CD930E487BC7/d:Shape/f:ClusterShapeFactory.cs" caret="1354" fromTop="23" />
+    <File id="AA2D3699-3FC9-43D6-AA24-CD930E487BC7/d:Shape/f:GrahamScan.cs" caret="228" fromTop="0" />
+    <File id="E8310B15-6B84-40A5-856D-B0AE0EEE3771/f:HandDataFactory.cs" caret="2664" fromTop="38" />
+    <File id="CDB12665-4E9E-46CA-AD74-63E943C17F62/f:SDKClusterDataSource.cs" caret="575" fromTop="18" />
+    <File id="AA2D3699-3FC9-43D6-AA24-CD930E487BC7/d:Clustering/f:KMeansClusterFactory.cs" caret="2837" fromTop="63" />
+    <File id="AA2D3699-3FC9-43D6-AA24-CD930E487BC7/d:Clustering/f:IClusterFactory.cs" caret="203" fromTop="9" />
+    <File id="AA2D3699-3FC9-43D6-AA24-CD930E487BC7/d:Clustering/f:Cluster.cs" caret="1369" fromTop="21" />
+    <File id="AA2D3699-3FC9-43D6-AA24-CD930E487BC7/d:Clustering/f:ClusterPrototypeFactory.cs" caret="0" fromTop="0" />
+    <File id="4475ED1D-4EFE-43F3-9774-96CDA04FE1BD/f:MainWindow.xaml.cs" caret="1991" fromTop="15" />
+    <File id="CDB12665-4E9E-46CA-AD74-63E943C17F62/f:IKinectSensor.cs" caret="0" fromTop="0" />
+    <File id="CDB12665-4E9E-46CA-AD74-63E943C17F62/f:SDKBitmapDataSource.cs" caret="0" fromTop="0" />
+    <File id="4475ED1D-4EFE-43F3-9774-96CDA04FE1BD/f:config.xml" caret="0" fromTop="0" />
+    <File id="AA2D3699-3FC9-43D6-AA24-CD930E487BC7/d:OpenNI/f:OpenNIDataSourceFactory.cs" caret="1210" fromTop="29" />
+    <File id="AA2D3699-3FC9-43D6-AA24-CD930E487BC7/f:IDataSource.cs" caret="0" fromTop="0" />
+    <File id="AA2D3699-3FC9-43D6-AA24-CD930E487BC7/d:Clustering/f:ClusterDataSourceSettings.cs" caret="1421" fromTop="15" />
+    <File id="CDB12665-4E9E-46CA-AD74-63E943C17F62/f:KinectSensorAdapter.cs" caret="962" fromTop="6" />
+    <File id="E8310B15-6B84-40A5-856D-B0AE0EEE3771/f:FingerPointDetector.cs" caret="680" fromTop="21" />
+    <File id="486F10D4-B41E-4CB7-B8CF-9BD97636A646/f:mouse_config.xml" caret="0" fromTop="0" />
+    <File id="486F10D4-B41E-4CB7-B8CF-9BD97636A646/f:MainWindow.xaml.cs" caret="0" fromTop="0" />
+    <File id="486F10D4-B41E-4CB7-B8CF-9BD97636A646/f:ModeCombination.cs" caret="179" fromTop="0" />
+    <File id="4475ED1D-4EFE-43F3-9774-96CDA04FE1BD/f:App.xaml" caret="358" fromTop="9" />
+    <File id="4475ED1D-4EFE-43F3-9774-96CDA04FE1BD/f:KinectTouchWindow.xaml" caret="489" fromTop="5" />
+    <File id="CDB12665-4E9E-46CA-AD74-63E943C17F62/f:SDKDataSourceFactory.cs" caret="658" fromTop="19" />
+    <File id="4475ED1D-4EFE-43F3-9774-96CDA04FE1BD/f:KinectTouchWindow.xaml.cs" caret="5147" fromTop="27" />
+  </RecentFiles>
+  <RecentEdits>
+    <File id="E8310B15-6B84-40A5-856D-B0AE0EEE3771/f:HandDataSourceSettings.cs" caret="1595" fromTop="15" />
+    <File id="CDB12665-4E9E-46CA-AD74-63E943C17F62/f:ImageFrameDepthPointFilter.cs" caret="1796" fromTop="22" />
+    <File id="E8310B15-6B84-40A5-856D-B0AE0EEE3771/d:Mouse/f:FingerCursorMode.cs" caret="619" fromTop="15" />
+    <File id="E8310B15-6B84-40A5-856D-B0AE0EEE3771/d:Mouse/f:MouseController.cs" caret="4494" fromTop="19" />
+    <File id="486F10D4-B41E-4CB7-B8CF-9BD97636A646/f:MainWindow.xaml.cs" caret="5596" fromTop="18" />
+    <File id="E8310B15-6B84-40A5-856D-B0AE0EEE3771/d:Mouse/f:HandTrackingCursorMode.cs" caret="0" fromTop="0" />
+    <File id="CDB12665-4E9E-46CA-AD74-63E943C17F62/f:SDKClusterDataSource.cs" caret="2670" fromTop="15" />
+    <File id="4475ED1D-4EFE-43F3-9774-96CDA04FE1BD/f:App.xaml" caret="256" fromTop="4" />
+    <File id="CDB12665-4E9E-46CA-AD74-63E943C17F62/f:SDKDataSourceFactory.cs" caret="884" fromTop="0" />
+    <File id="CDB12665-4E9E-46CA-AD74-63E943C17F62/f:KinectSensorAdapter.cs" caret="428" fromTop="15" />
+    <File id="AA2D3699-3FC9-43D6-AA24-CD930E487BC7/d:Clustering/f:ClusterDataSourceSettings.cs" caret="1700" fromTop="21" />
+    <File id="4475ED1D-4EFE-43F3-9774-96CDA04FE1BD/f:KinectTouchWindow.xaml" caret="489" fromTop="5" />
+    <File id="4475ED1D-4EFE-43F3-9774-96CDA04FE1BD/f:KinectTouchWindow.xaml.cs" caret="5323" fromTop="31" />
+  </RecentEdits>
+</RecentFiles>

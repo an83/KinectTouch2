@@ -1,0 +1,12 @@
+<Modules>
+  <Module PersistentId="E8310B15-6B84-40A5-856D-B0AE0EEE3771" ModuleId="CCT.NUI.HandTracking" />
+  <Module PersistentId="AA2D3699-3FC9-43D6-AA24-CD930E487BC7" ModuleId="CCT.NUI.Core" />
+  <Module PersistentId="96DAA039-65E1-4540-908A-8B97AC13AE29" ModuleId="CCT.NUI.Tests" />
+  <Module PersistentId="CDB12665-4E9E-46CA-AD74-63E943C17F62" ModuleId="CCT.NUI.KinectSDK" />
+  <Module PersistentId="4F075CC3-47A0-4F9A-9561-DB0414374EF1" ModuleId="CCT.NUI.Samples" />
+  <Module PersistentId="CD9418F2-2895-480E-932D-14DBD1B1586A" ModuleId="CCT.NUI.StartMenu" />
+  <Module PersistentId="00803D5A-38AC-43E2-8B84-2D978FA704EB" ModuleId="CCT.NUI.TestDataCollector" />
+  <Module PersistentId="4475ED1D-4EFE-43F3-9774-96CDA04FE1BD" ModuleId="CCT.NUI.WPFSamples" />
+  <Module PersistentId="5FCD7892-BB28-4BCC-9B57-0EAA463356ED" ModuleId="CCT.NUI.Visual" />
+  <Module PersistentId="486F10D4-B41E-4CB7-B8CF-9BD97636A646" ModuleId="CCT.NUI.MouseControl" />
+</Modules>

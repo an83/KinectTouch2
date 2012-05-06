@@ -1,0 +1,19 @@
+﻿<Window x:Name="window" x:Class="CCT.NUI.WPFSamples.KinectTouchWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:uc="clr-namespace:CCT.NUI.Visual;assembly=CCT.NUI.Visual"
+        Title="KinectTouch" Height="540" Width="958" Icon="/CCT.NUI.WPFSamples;component/organizer.ico" IsManipulationEnabled="true" 
+        Closing="Window_Closing" Loaded="Window_Loaded" Topmost="True" >
+    <Grid>
+        <StackPanel HorizontalAlignment="Left" Width="280">
+            <StackPanel Orientation="Horizontal"/>
+            <CheckBox Margin="5" Content="Clustering Layer" Height="16" Name="checkClusterLayer" Click="checkClusterLayer_Click" IsEnabled="True"  IsChecked="False"/>
+            <CheckBox Margin="5" Content="Hand Layer" Height="16" Name="checkHandLayer" Click="checkHandLayer_Click" IsEnabled="True"  IsChecked="True" />
+            <CheckBox Margin="5" Content="Topmost" Height="16" x:Name="checkTopmost"  IsEnabled="True"  IsChecked="{Binding x:window.Topmost}" Visibility="Hidden"/>
+            <Button Margin="5" VerticalAlignment="Bottom" Click="Button_Click">Exit</Button>
+            <Label x:Name="labelHandLocation" Content="Hand location" HorizontalAlignment="Left" Width="280"/>
+            <Label x:Name="labelFingerCount" Content="Finger count" HorizontalAlignment="Left" Width="280"/>
+        </StackPanel>
+        <uc:WpfVideoControl Name="videoControl" Width="640" Height="480" HorizontalAlignment="Left" Margin="286,12,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
