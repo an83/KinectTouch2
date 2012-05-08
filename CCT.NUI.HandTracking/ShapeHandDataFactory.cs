@@ -89,8 +89,8 @@ namespace CCT.NUI.HandTracking
         }
 
         private HandData Create(int id, Shape shape, IList<FingerPoint> lastFrameFingerPoints)
-        {
-            var newFingerPoints = this.DetectFingerPoints(shape.ConvexHull, shape.Contour);
+        {   
+            var newFingerPoints = this.DetectFingerPoints(shape);
             var fingerPoints = this.MapFingerPoints(lastFrameFingerPoints, newFingerPoints);
             var palm = DetectPalm(shape, shape.Contour);
 
@@ -138,16 +138,24 @@ namespace CCT.NUI.HandTracking
             {
                 discontinuedFinger.NegativeFrameCount++;
             }
-            return distanceMap.MappedItems.Select(i => i.Item2).Union(distanceMap.UnmappedItems).Union(distanceMap.DiscontinuedItems).Where(i => i.NegativeFrameCount <= this.settings.FramesForDiscontinuedFingerPoint).ToList();
+
+            return distanceMap.MappedItems.Select(i => i.Item2)
+                .Union(distanceMap.UnmappedItems)
+                .Union(distanceMap.DiscontinuedItems)
+                .Where(i => i.NegativeFrameCount <= this.settings.FramesForDiscontinuedFingerPoint).ToList();
         }
 
-        private IList<FingerPoint> DetectFingerPoints(ConvexHull convexHull, Contour contour)
+        private IList<FingerPoint> DetectFingerPoints(Shape shape)
         {
             if (!this.settings.DetectFingers)
             {
                 return new List<FingerPoint>();
             }
-            return this.fingerPointDetector.FindFingerPoints(contour, convexHull);
+
+            var result = this.fingerPointDetector.FindFingerPoints(shape.Contour, shape.ConvexHull)
+                .Where(i => i.Location.Y <= shape.Location.Y).ToList();
+
+            return result;
         }
     }
 }

@@ -52,10 +52,10 @@ namespace CCT.NUI.WPFSamples
 
             this.factory = new SDKDataSourceFactory();
 
-            this.clusterDataSource = this.factory.CreateClusterDataSource(new ClusterDataSourceSettings { MaximumDepthThreshold = 900 });
+            this.clusterDataSource = this.factory.CreateClusterDataSource(new ClusterDataSourceSettings { MaximumDepthThreshold = 1000 });
             this.handDataSource = new HandDataSource(this.factory.CreateShapeDataSource(this.clusterDataSource, new Core.Shape.ShapeDataSourceSettings()));
-            this.rgbImageDataSource = this.factory.CreateRGBImageDataSource();
-            this.rgbImageDataSource.Start();
+            //this.rgbImageDataSource = this.factory.CreateRGBImageDataSource();
+            //this.rgbImageDataSource.Start();
 
             var depthImageSource = this.factory.CreateDepthImageDataSource();
             depthImageSource.NewDataAvailable += new NewDataHandler<ImageSource>(MainWindow_NewDataAvailable);
@@ -92,6 +92,8 @@ namespace CCT.NUI.WPFSamples
         private static int screenWidth = (int) SystemParameters.PrimaryScreenWidth;
         private static int screenHeight = (int) SystemParameters.PrimaryScreenHeight;
 
+        private const int gestureFingerCount = 2;
+
         private void handDataSource_NewDataAvailable(HandCollection data)
         {
             if (data.HandsDetected)
@@ -104,11 +106,12 @@ namespace CCT.NUI.WPFSamples
 
                 //color this point 
 
-                Debug.WriteLine("timespan: {0}, fingerCount: {2}, lastFingerCount: {3}",
+                Debug.WriteLine("timespan: {0}, fingerCount: {2}, lastFingerCount: {3}, location: {4}",
                     DateTime.Now - lastUpdate,
                     lastUpdate,
                     hand.FingerCount,
-                    lastFingerCount);
+                    lastFingerCount,
+                    location);
 
                 if (DateTime.Now > lastUpdate.AddMilliseconds(100))
                 {
@@ -135,7 +138,7 @@ namespace CCT.NUI.WPFSamples
 
                     if (fingerCountChanged)
                     {
-                        if (hand.FingerCount ==2)
+                        if (hand.FingerCount == gestureFingerCount)
                         {
                             //start
                             OnTouchStart(x, y);
@@ -146,7 +149,7 @@ namespace CCT.NUI.WPFSamples
                             OnTouchEnd(x, y);
                         }
                     }
-                    else if (hand.FingerCount ==2)
+                    else if (hand.FingerCount == gestureFingerCount)
                     {
                         // update touch
                         OnTouchMove(x, y);

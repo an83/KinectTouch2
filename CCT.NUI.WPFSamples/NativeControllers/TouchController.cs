@@ -38,7 +38,7 @@ namespace CCT.NUI.WPFSamples
             touchArea.bottom = y + 2;
             contacts.rcContact = touchArea;
 
-            flag = InjectTouchInput(1, ref contacts);//returned flag is false which means the injection fails!
+            flag = InjectTouchInput(1, ref contacts);
 
             contacts.pressure = 0;
             if (flag)
@@ -85,20 +85,19 @@ namespace CCT.NUI.WPFSamples
             }
         }
 
-        public void TouchDrag(int x, int y)
+        public bool TouchDrag(int x, int y)
         {
             //Setting the Pointer Flag to Drag
             contact.pointerInfo.pointerFlags = POINTER_FLAGS.POINTER_FLAG_UPDATE | POINTER_FLAGS.POINTER_FLAG_INRANGE | POINTER_FLAGS.POINTER_FLAG_INCONTACT;
 
-            contact.pointerInfo.ptPixelLocation.x = x; // updating the X Co-ordinate to x-100 pixels
+            contact.pointerInfo.ptPixelLocation.x = x; 
             contact.pointerInfo.ptPixelLocation.y = y;
 
-            InjectTouchInput(1, ref contact);
+            return InjectTouchInput(1, ref contact);
         }
 
         public bool TouchUp()
         {
-            //contacts.pressure = 0;
             contact.pointerInfo.pointerFlags = POINTER_FLAGS.POINTER_FLAG_UP;
             return InjectTouchInput(1, ref contact);
         }

@@ -47,7 +47,14 @@ namespace CCT.NUI.HandTracking
             }
 
             var center = Point.Center(point1, point2);
-            return Point.Distance(center, pointOnContour) >= this.settings.MinimumDistanceFingerPointToIntersectionLine;
+            var validDistance = Point.Distance(center, pointOnContour) >= this.settings.MinimumDistanceFingerPointToIntersectionLine;
+
+            return validDistance;
+
+            //if(!validDistance)
+            //{
+            //    return false;
+            //}
         }
 
         private int FindIndexOfClosestPointOnContour(Point fingerPoint)

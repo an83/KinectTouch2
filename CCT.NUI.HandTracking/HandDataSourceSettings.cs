@@ -38,8 +38,8 @@ namespace CCT.NUI.HandTracking
             settings.MaximumDistanceBetweenIntersectionPoints = 27;
 
             settings.DetectFingers = true;
-            settings.DetectCenterOfPalm = false;
-            settings.DetectFingerDirection = true;
+            settings.DetectCenterOfPalm = true;
+            settings.DetectFingerDirection = false;
 
             settings.PalmAccuracySearchRadius = 8;
             settings.PalmContourReduction = 8;
