@@ -73,38 +73,44 @@ namespace CCT.NUI.WPFSamples
 
         private void OnTouchStart(int x, int y)
         {
-            Debug.WriteLine(string.Format("start. location: {0},{1}",x,y));
+            Debug.WriteLine("start. location: {0},{1}",x,y);
             controller.TouchDown(x, y);
         }
 
         private void OnTouchMove(int x, int y)
         {
-            Debug.WriteLine(string.Format("move. location: {0},{1}", x, y));
+            Debug.WriteLine("move. location: {0},{1}", x, y);
             controller.TouchDrag(x,y);
         }
 
         private void OnTouchEnd(int x, int y)
         {
-            Debug.WriteLine(string.Format("end. location: {0},{1}", x, y));
+            Debug.WriteLine("end. location: {0},{1}", x, y);
             controller.TouchUp();
         }
 
-        private static int screenWidth = (int) SystemParameters.PrimaryScreenWidth;
-        private static int screenHeight = (int) SystemParameters.PrimaryScreenHeight;
+        private static readonly int ScreenWidth = (int) SystemParameters.PrimaryScreenWidth;
+        private static readonly int ScreenHeight = (int) SystemParameters.PrimaryScreenHeight;
 
-        private const int gestureFingerCount = 2;
+        private const int TouchGestureFingerCount = 2;
+        private const int MoveGestureFingerCount = 0;
 
         private void handDataSource_NewDataAvailable(HandCollection data)
         {
             if (data.HandsDetected)
             {
-                //TODO: get left hand only
                 var hand = data.Hands.Last();
 
-                //scale to screen resolution
                 var location = MapToScreen(hand.Location);
 
-                //color this point 
+                //if (hand.HasPalmPoint)
+                //{
+                //    location = MapToScreen(hand.PalmPoint.Value);
+                //}
+                //else
+                //{
+                //    return;
+                //}
 
                 Debug.WriteLine("timespan: {0}, fingerCount: {2}, lastFingerCount: {3}, location: {4}",
                     DateTime.Now - lastUpdate,
@@ -123,33 +129,25 @@ namespace CCT.NUI.WPFSamples
                         y = (int)location.Y;
 
                     //set mouse position
-                    MouseController.SendMouseInput(x, y, screenWidth, screenHeight, false);
+                    MouseController.SendMouseInput(x, y, ScreenWidth, ScreenHeight, false);
 
                     var fingerCountChanged = lastFingerCount != hand.FingerCount;
                     lastFingerCount = hand.FingerCount;
 
-                    //if (hand.FingerCount == 2 && fingerCountChanged)
-                    //{
-                    //    //TouchController.Touch(x, y); Debug.WriteLine("touch!");
-
-                    //    OnTouchStart(x, y);
-                    //    OnTouchEnd(x, y);
-                    //}
-
                     if (fingerCountChanged)
                     {
-                        if (hand.FingerCount == gestureFingerCount)
+                        if (hand.FingerCount == TouchGestureFingerCount)
                         {
                             //start
                             OnTouchStart(x, y);
                         }
-                        else if (hand.FingerCount == 0)
+                        else if (hand.FingerCount == MoveGestureFingerCount)
                         {
                             //end
                             OnTouchEnd(x, y);
                         }
                     }
-                    else if (hand.FingerCount == gestureFingerCount)
+                    else if (hand.FingerCount == TouchGestureFingerCount)
                     {
                         // update touch
                         OnTouchMove(x, y);
@@ -161,13 +159,6 @@ namespace CCT.NUI.WPFSamples
                                                this.labelHandLocation.Content = location.ToString();
                                                this.labelFingerCount.Content = hand.FingerCount;
                                            });
-
-
-                /*  find hand
-                 *  map location to hand
-                 *  if finger count is 1 or more apply touch
-                 */
-
             }
         }
 

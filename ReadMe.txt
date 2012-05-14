@@ -10,10 +10,11 @@ Prerequisites
 
 Instructions
 ============
--use Visual Studio 11
--open CCT.NUI.sln
--set CCT.NUI.WPFSamples as startup project
--run (F5)
+-Use Visual Studio 11
+-Open KinectTouch2.sln
+-Set KinectTouch2 as startup project
+-Make sure Kinect device is connected
+-Run (F5)
 
 Notes
 =====
