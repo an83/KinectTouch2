@@ -27,11 +27,8 @@ namespace CCT.NUI.WPFSamples
         private IClusterDataSource clusterDataSource;
         private IImageDataSource rgbImageDataSource;
         //private MouseController mouseController;
-        private Point? cursorLocation;
         private int lastFingerCount;
         private DateTime lastUpdate = DateTime.Now;
-
-        private object syncRoot = new object();
 
         public KinectTouchWindow()
         {
@@ -123,8 +120,6 @@ namespace CCT.NUI.WPFSamples
                 {
                     lastUpdate = DateTime.Now;
 
-                    cursorLocation = location;
-
                     int x = (int)location.X,
                         y = (int)location.Y;
 
@@ -185,9 +180,6 @@ namespace CCT.NUI.WPFSamples
             return value;
         }
 
- 
-
-
         void MainWindow_NewDataAvailable(ImageSource data)
         {
             this.videoControl.Dispatcher.Invoke(new Action(() =>
@@ -200,8 +192,12 @@ namespace CCT.NUI.WPFSamples
         {
             new Action(() =>
             {
-                this.handDataSource.Stop();
-                this.factory.DisposeAll();
+                if (this.handDataSource!=null)
+                    this.handDataSource.Stop();
+
+                if (this.factory != null)
+                    this.factory.DisposeAll();
+                
             }).BeginInvoke(null, null);
         }
         
@@ -231,11 +227,24 @@ namespace CCT.NUI.WPFSamples
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Start();
-            ToggleLayers();
+            
         }
 
-
-
+        private void Start_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Start();
+                buttonStart.IsEnabled = false;
+                
+                checkClusterLayer.IsEnabled = true;
+                checkHandLayer.IsEnabled = true;
+                ToggleLayers();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
     }
 }

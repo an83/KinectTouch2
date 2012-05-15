@@ -1,1 +1,0 @@
-C:\Kinect\KinectTouch2\CCT.NUI.WPFSamples\bin\Debug\CCT.NUI.WPFSamples.exe.config

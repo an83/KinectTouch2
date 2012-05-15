@@ -7,12 +7,13 @@
     <Grid>
         <StackPanel HorizontalAlignment="Left" Width="280">
             <StackPanel Orientation="Horizontal"/>
-            <CheckBox Margin="5" Content="Clustering Layer" Height="16" Name="checkClusterLayer" Click="checkClusterLayer_Click" IsEnabled="True"  IsChecked="False"/>
-            <CheckBox Margin="5" Content="Hand Layer" Height="16" Name="checkHandLayer" Click="checkHandLayer_Click" IsEnabled="True"  IsChecked="True" />
-            <CheckBox Margin="5" Content="Topmost" Height="16" x:Name="checkTopmost"  IsEnabled="True"  IsChecked="{Binding x:window.Topmost}" Visibility="Hidden"/>
-            <Button Margin="5" VerticalAlignment="Bottom" Click="Button_Click">Exit</Button>
+            <CheckBox Margin="5" Content="Always on top" Height="16" x:Name="checkTopmost"  IsChecked="{Binding Topmost, ElementName=window}" Visibility="Visible" />
+            <Button Margin="5" VerticalAlignment="Top" Content="Start" Name="buttonStart" Click="Start_Click"/>
+            <CheckBox Margin="5" Content="Clustering Layer" Height="16" Name="checkClusterLayer" Click="checkClusterLayer_Click" IsEnabled="False"  IsChecked="False"/>
+            <CheckBox Margin="5" Content="Hand Layer" Height="16" Name="checkHandLayer" Click="checkHandLayer_Click" IsEnabled="False"  IsChecked="True" />
             <Label x:Name="labelHandLocation" Content="Hand location" HorizontalAlignment="Left" Width="280"/>
             <Label x:Name="labelFingerCount" Content="Finger count" HorizontalAlignment="Left" Width="280"/>
+            <Button Margin="5" VerticalAlignment="Bottom" Click="Button_Click" Content="Exit"/>
         </StackPanel>
         <uc:WpfVideoControl Name="videoControl" Width="640" Height="480" HorizontalAlignment="Left" Margin="286,12,0,0" VerticalAlignment="Top"/>
     </Grid>
